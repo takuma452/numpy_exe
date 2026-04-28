@@ -31,7 +31,17 @@ class LinearRegression:
       return np.dot(x, self.theta) 
       
     def score(self, x, y):
-        pass
+        """
+        >>> import regression
+        >>> import datasets
+        >>> X, Y = datasets.load_linear_example1()
+        >>> model = LinearRegression()
+        >>> model.fit(X,Y)
+        >>> round(float(model.score(X,Y)), 10)
+        1.2474226804
+        """
+        error = self.predict(x) - y
+        return (error**2).sum()
       
       
       
