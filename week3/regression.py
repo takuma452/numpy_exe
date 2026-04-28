@@ -10,7 +10,6 @@ class LinearRegression:
       >>> import regression
       >>> import datasets
       >>> X, Y = datasets.load_linear_example1()
-      >>> import importlib
       >>> model = regression.LinearRegression()
       >>> model.fit(X,Y)
       >>> model.theta
@@ -20,7 +19,16 @@ class LinearRegression:
       self.theta = np.dot(np.dot(temp,x.T),y)
       
     def predict(self, x):
-        pass
+      """
+      >>> import regression
+      >>> import datasets
+      >>> X, Y = datasets.load_linear_example1()
+      >>> model = regression.LinearRegression()
+      >>> model.fit(X,Y)
+      >>> model.predict(X)
+      array([ 7.28350515,  9.2628866 , 11.7371134 , 13.71649485])
+      """
+      return np.dot(x, self.theta) 
       
     def score(self, x, y):
         pass
