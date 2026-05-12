@@ -13,6 +13,8 @@ def load_linear_example1():
     Y = np.array([7, 10, 11, 14])
     return X, Y
 
+
 if __name__ == "__main__":
     import doctest
     doctest.testmod()
+    
